@@ -1,0 +1,32 @@
+﻿@model System.Collections.Generic.IList<GenericWebApp.Domain.Player>
+
+@{
+    ViewBag.Title = "Players";
+    Layout = "_Layout";
+}
+
+<h2>Players</h2>
+
+<table>
+    <thead>
+    <tr>
+        <td>
+            ID
+        </td>
+        <td>
+            Name
+        </td>
+    </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.PlayerId
+            </td>
+            <td>
+                @item.Name
+            </td>
+        </tr>
+    }
+</table>
